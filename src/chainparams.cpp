@@ -174,7 +174,7 @@ public:
         genesis.nNonce = 22802;
         genesis.nTime    = 1487718900;
 
-        if (true && genesis.GetHash() != hashGenesisBlock)
+        if (false && genesis.GetHash() != hashGenesisBlock)
                        {
                            printf("Searching for genesis block...\n");
                            uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
@@ -205,7 +205,7 @@ public:
                        }
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x00003a215c5c76d0840947ff972888b9c8521c6d3ba88453000eed95c0bbf683"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -273,7 +273,7 @@ public:
                        }
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x6258d5b30e06b2e241e248ec79de68882178923747ae423764820889bd52ade0"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }
