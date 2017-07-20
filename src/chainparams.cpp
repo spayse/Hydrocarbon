@@ -78,7 +78,7 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = 1500560569;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 0;
+        genesis.nNonce   = 1226019;
         
        
 				// uncomment to log genesis block info        
@@ -117,8 +117,8 @@ public:
         
         
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x000009a4b25031eba41899a7342bef9624cf7ebd014dcafc4bd146811c6cedcf"));
+        assert(genesis.hashMerkleRoot == uint256("0xc01016241fb4ce889df81f1a25f289dc981808465d9deb11787590521ec299e2"));
 
         // Add seednodes below //
           vSeeds.push_back(CDNSSeedData("Hydrocarboncoin.com",  "194.135.84.5"));
@@ -174,7 +174,7 @@ public:
         genesis.nNonce = 22802;
         genesis.nTime    = 1487718900;
 
-        if (false && genesis.GetHash() != hashGenesisBlock)
+        if (true && genesis.GetHash() != hashGenesisBlock)
                        {
                            printf("Searching for genesis block...\n");
                            uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
