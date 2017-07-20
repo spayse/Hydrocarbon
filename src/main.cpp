@@ -1003,7 +1003,7 @@ int64_t GetProofOfWorkReward(int64_t nFees, int nHeight)
 }
 
 // miner's coin stake reward
-int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees)
+int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees,int nHeight)
 {
     
       if (nHeight > 2250)
