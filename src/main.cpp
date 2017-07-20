@@ -1003,16 +1003,12 @@ int64_t GetProofOfWorkReward(int64_t nFees, int nHeight)
 }
 
 // miner's coin stake reward
-int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees,int nHeight, int64_t nSubsidy)
+int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees)
 {
     
-      if (nHeight > 2250)
-          
           int64_t nSubsidy = 40 * COIN;
           
-     else      
-
-        int64_t nSubsidy = 20 * COIN;
+   
     LogPrint("creation", "GetProofOfStakeReward(): create=%s nCoinAge=%d\n", FormatMoney(nSubsidy), nCoinAge);
 
     return nSubsidy + nFees;
