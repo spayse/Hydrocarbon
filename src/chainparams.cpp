@@ -121,8 +121,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xc01016241fb4ce889df81f1a25f289dc981808465d9deb11787590521ec299e2"));
 
         // Add seednodes below //
-          vSeeds.push_back(CDNSSeedData("Hydrocarboncoin.com",  "194.135.85.45"));
-          vSeeds.push_back(CDNSSeedData("Hydrocarboncoin.com",  "194.135.84.132"));
+          vSeeds.push_back(CDNSSeedData("Hydrocarboncoin.com",  "194.135.84.5"));
+          vSeeds.push_back(CDNSSeedData("Hydrocarboncoin.com",  "212.24.99.107"));
          
 
 

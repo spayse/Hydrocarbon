@@ -154,6 +154,7 @@ Makefile: hydrocarbon-qt.pro ../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win3
 		../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qt_config.prf \
 		../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++/qmake.conf \
 		../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/exclusive_builds.prf \
 		../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/toolchain.prf \
 		../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/default_pre.prf \
@@ -284,6 +285,7 @@ Makefile: hydrocarbon-qt.pro ../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win3
 ../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qt_config.prf:
 ../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++/qmake.conf:
 ../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/exclusive_builds.prf:
 ../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/toolchain.prf:
 ../mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/default_pre.prf:
@@ -326,17 +328,17 @@ qmake_all: FORCE
 make_first: release-make_first debug-make_first  FORCE
 all: release-all debug-all  FORCE
 clean: release-clean debug-clean  FORCE
-	-$(DEL_FILE) /mnt/Noorcoin/src/leveldb/libleveldb.a;
+	-$(DEL_FILE) /mnt/Hydrocarbon/src/leveldb/libleveldb.a;
 	-$(DEL_FILE) cd
-	-$(DEL_FILE) /mnt/Noorcoin/src/leveldb
+	-$(DEL_FILE) /mnt/Hydrocarbon/src/leveldb
 	-$(DEL_FILE) ;
 	-$(DEL_FILE) clean
 distclean: release-distclean debug-distclean  FORCE
 	-$(DEL_FILE) Makefile
-	-$(DEL_FILE) /mnt/Noorcoin/hydrocarbon-qt_plugin_import.cpp .qmake.stash
+	-$(DEL_FILE) /mnt/Hydrocarbon/hydrocarbon-qt_plugin_import.cpp .qmake.stash
 
-/mnt/Noorcoin/src/leveldb/libleveldb.a: FORCE
-	cd /mnt/Noorcoin/src/leveldb && CC=i686-w64-mingw32.static-gcc CXX=i686-w64-mingw32.static-g++ TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) OPT="-pipe -fno-keep-inline-dllexport -O2" libleveldb.a libmemenv.a && i686-w64-mingw32.static-ranlib /mnt/Noorcoin/src/leveldb/libleveldb.a && i686-w64-mingw32.static-ranlib /mnt/Noorcoin/src/leveldb/libmemenv.a
+/mnt/Hydrocarbon/src/leveldb/libleveldb.a: FORCE
+	cd /mnt/Hydrocarbon/src/leveldb && CC=i686-w64-mingw32.static-gcc CXX=i686-w64-mingw32.static-g++ TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) OPT="-pipe -fno-keep-inline-dllexport -O2" libleveldb.a libmemenv.a && i686-w64-mingw32.static-ranlib /mnt/Hydrocarbon/src/leveldb/libleveldb.a && i686-w64-mingw32.static-ranlib /mnt/Hydrocarbon/src/leveldb/libmemenv.a
 
 release-mocclean:
 	$(MAKE) -f $(MAKEFILE).Release mocclean
